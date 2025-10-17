@@ -48,6 +48,8 @@ Bash
 
 git clone https://github.com/your-username/interactive-quiz-game.git
 Navigate to the project directory:
+<img width="858" height="665" alt="Screenshot 2025-10-17 103553" src="https://github.com/user-attachments/assets/1e55d819-1d3e-4b5d-8393-aedf74e341b5" />
+
 
 Bash
 
