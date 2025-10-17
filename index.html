@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <!-- Start Screen -->
+    <div class="start-screen" id="startScreen">
+      <div class="quiz-header">
+        <h1 class="quiz-title">🧠 Interactive Quiz Game</h1>
+        <p class="quiz-description">
+          Test your knowledge with our interactive quiz featuring single choice, multiple choice, and fill-in-the-blanks!
+        </p>
+      </div>
+      <div class="quiz-stats">
+        <div class="stat-card"><span class="stat-number">10</span><span class="stat-label">Questions</span></div>
+        <div class="stat-card"><span class="stat-number">3</span><span class="stat-label">Types</span></div>
+        <div class="stat-card"><span class="stat-number">5</span><span class="stat-label">Minutes</span></div>
+      </div>
+      <button class="btn btn-primary" onclick="startQuiz()">🚀 Start Quiz</button>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="quiz-content" id="quizContent" style="display: none;">
+      <div class="quiz-header">
+        <h1 class="quiz-title">🧠 Knowledge Quiz</h1>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+      <div id="questionsContainer"></div>
+      <div class="controls">
+        <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>← Previous</button>
+        <div id="questionInfo"></div>
+        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div class="results-container" id="resultsContainer" style="display: none;">
+      <div class="quiz-header">
+        <h1 class="quiz-title">🎉 Quiz Complete!</h1>
+      </div>
+      <div class="score-circle" id="scoreCircle">
+        <div class="score-inner">
+          <div class="score-percentage" id="scorePercentage">0%</div>
+          <div class="score-label">Score</div>
+        </div>
+      </div>
+      <div class="results-details" id="resultsDetails">
+        <div class="result-item"><span>Correct:</span><span id="correctCount">0</span></div>
+        <div class="result-item"><span>Incorrect:</span><span id="incorrectCount">0</span></div>
+        <div class="result-item"><span>Total:</span><span id="totalQuestions">0</span></div>
+      </div>
+      <button class="btn btn-primary" onclick="restartQuiz()">🔄 Try Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
